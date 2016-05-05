@@ -80,15 +80,30 @@ public class main {
 		//Exemplul 9: Declarati 2 numere intregi si verificati rezultatul adunarii lor astfel:
 		//daca este 4, atunci afisati "Numerele sunt bune", daca este 8, afisati "Numerele sunt okay",
 		//iar in orice alt caz afisati "Numere nu sunt bune"
-		
+		int s1=2;
+		int s2=5;
+		int stotal = s1+s2;
+		if(stotal == 4){
+			System.out.println("Numerele sunt bune");
+		}else if(stotal == 8){
+			System.out.println("numerele sunt okey");
+		}else{
+			System.out.println("numerele nu sunt bune");
+		}
 		
 		//Exemplul 10: Declarati un vector de numere intregi de dimensiune 8. Adaugati, utilizand o
 		//instructiune repetitiva, numerele de la 1 la 8, in ordine crescatoare
-		
+		int f2=0;
+		for(int f1=8;f2<=8;f2=f2+1){
+			int sumf1 = f1+f2;
+			System.out.println(sumf1);
+		}
 		
 		//Exemplul 10b: Afisati vectorul declarat anterior. Apoi afisati-l in ordinea inversa a 
 		//elementelor (utilizand o instructiune repetitiva)
-		
+		for(int f1=16;f1>=8;f1=f1-1){
+			System.out.println(f1);
+		}
 		
 		//Exemplul 11: Declarati un vector de numere reale de dimensiune 4. Adaugati manual 4 elemente in acest vector si afisati-l.
 		
