@@ -77,22 +77,81 @@ public class Main {
 				System.out.println("Numarul "+ nr1 +" este mai mare decat numarul "+ nr2);
 				//Exemplul 7: Declarati o variabile de tip boolean care sa fie true daca cele doua numere declarate in exemplul anterior sunt egale
 				
-				
+			 
 				//Exemplul 8: Determinati si afisati rezultatul ridicarii la putere a doua numere intregi (declarate de voi), folosind operatiunea "for"
+				
+				int yy = 2;
+				int zz = 3;
+				int qq = 1;
+				for (int i=0;i<zz;i++){
+				  qq=qq*yy;
+				}
+				System.out.println(qq);
+				
 				
 				
 				//Exemplul 8b: Declarati un numar intreg si gasiti si afisati, printr-o instructiune repetitiva si una de decizie, cel mai mare numar par, mai mic sau egal cu cel initial
 				
 				
+				int u = 10;
+				
+				for (int j=u;j>=2;j--){
+					if (j%2==0){
+						System.out.println(j);
+					break;
+					}
+					
+				}
+				
+				
 				//Exemplul 9: Declarati 2 numere intregi si verificati rezultatul adunarii lor astfel: daca este 4, atunci afisati "Numerele sunt bune", daca este 8, afisati "Numerele sunt okay", iar in orice alt caz afisati "Numere nu sunt bune"
+				
+				int iu = 4;
+				int lo = 6;
+				int adu = iu+lo;
+				
+				if (adu == 4){
+					System.out.println("numerele sunt bune");
+				}else {
+						if (adu == 8){
+							System.out.println("numerele sunt ok");
+						}else {
+								System.out.println("numerele nu sunt bune");
+								
+							}
+						}
+					}
+				    
+				
+				
 				
 				
 				//Exemplul 10: Declarati un vector de numere intregi de dimensiune 8. Adaugati, utilizand o instructiune repetitiva, numerele de la 1 la 8, in ordine crescatoare
+				int vec [] = new int[8];{
+				 
+				for (int v = 0; v<7 ;v++){
+					vec[v]=v+1;
 				
+					System.out.println(v+1);
+			
+			
+				}
 				
 				//Exemplul 10b: Declarati un vector cu 4 elemente (2 negative si 2 pozitive), calculati si afisati suma elementelor pozitive
 				
+				int vector =new int [4];
+				vector[0]=-1;
+				vector[1]=7;
+				vector[2]=-3;
+				vector[3]=9;
 				
+				int sun=0;
+				
+				for (int re=0;re<4;re++){
+					if(vector[re]>0){
+						sum+=vector[v];
+					}
+				}
 				//Exemplul 10c: Afisati vectorul declarat anterior. Apoi afisati-l in ordinea inversa a elementelor (utilizand o instructiune repetitiva)
 				
 				
@@ -112,11 +171,11 @@ public class Main {
 				
 				
 				
-			}
+			
 		
 		
 		
 		
 	}
-
+}
 
