@@ -139,19 +139,18 @@ public class Main {
 				
 				//Exemplul 10b: Declarati un vector cu 4 elemente (2 negative si 2 pozitive), calculati si afisati suma elementelor pozitive
 				
-				int vector =new int [4];
-				vector[0]=-1;
-				vector[1]=7;
-				vector[2]=-3;
-				vector[3]=9;
-				
-				int sun=0;
-				
-				for (int re=0;re<4;re++){
-					if(vector[re]>0){
-						sum+=vector[v];
-					}
-				}
+				int vector[] ={-1,7,-3,9};
+		
+		                int sum=0;
+		
+		                for (int re=0;re<vector.length;re++){
+			if(vector[re]>=0){
+				sum = sum+vector[re];
+	}
+		}
+		System.out.println(sum);
+	}
+}
 				//Exemplul 10c: Afisati vectorul declarat anterior. Apoi afisati-l in ordinea inversa a elementelor (utilizand o instructiune repetitiva)
 				
 				
