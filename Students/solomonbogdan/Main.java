@@ -156,6 +156,25 @@ public class Main {
 				
 				//Exemplul 11: Declarati un vector de numere reale de dimensiune 4. Adaugati manual 4 elemente in acest vector si afisati-l.
 				
+				double v[] = new double[4];
+		
+		v[0] = 1.5;
+		v[1] = 3.4;
+		v[2] = 5.2;
+		v[3] = 1.9;
+		
+		for (int i=0;i<v.length;i++){
+			
+			
+			System.out.println(v[i]);
+			
+		}
+				
+				
+				
+				
+				
+				
 				
 				//Exemplul 12: Cautati si afisati cel mai mare element din vectorul declarat anterior.
 			
