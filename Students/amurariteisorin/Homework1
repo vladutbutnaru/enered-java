@@ -16,6 +16,7 @@ public class Main {
 		 System.out.println(suma);
 		 
 		int[] numereFaine = {1,2,3,8,50,120,400,7,3,3,90,-4,-124,824,0};
+		
 		//Fie vectorul numereFaine. Calculati si afisati minimul, maximul si media aritmetica a elementelor lui.
 		
 		int max = 0;
@@ -45,6 +46,7 @@ public class Main {
 	    
 
 		String[] cuvinte = {"nume","mers","activitate","sofer","tablou","caiet","program"};
+	
 		//Fie vectorul cuvinte. Adaugati fiecarui cuvant din el prefixul "pre" si sufixul "lui" si afisati-le, despartite prin caracterul ","
 		for (int z = 0 ; z < cuvinte.length;z++) {
 			cuvinte[z] = cuvinte[z]+ "-ului";
@@ -56,6 +58,7 @@ public class Main {
 		
 		int numarator = 7;
 		int numitor = 3;
+	
 		//Avand numaratorul si numitorul de mai sus, calculati si afisati catul si restul impartirii lor
 		int cat;
 		int rest;
@@ -65,7 +68,22 @@ public class Main {
 	
 		//Folosind vectorul numereFaine de mai sus, inlocuiti elementele impare cu numarul 0
 		
-		
+		//int[] numereFaine = {1,2,3,8,50,120,400,7,3,3,90,-4,-124,824,0};
+
+        for(int x2=0;x2<numereFaine.length;x2++){
+
+         int x3=numereFaine[x2] % 2;
+
+         if(x3 == 1){
+
+          numereFaine[x2]=0;
+          
+         }
+         System.out.print(numereFaine[x2]+ " , ");
+        }
+        System.out.println("");
+        
+        
 		int[][] matrice = new int[2][2];
 		matrice[0][0] = 1;
 		matrice[0][1] = 2;
@@ -74,18 +92,55 @@ public class Main {
 		
 		//Avand matricea de mai sus, calculati si afisati produsul numerelor de pe diagonala principala, impartit la produsul numerelor de pe diagonala secundara
 		
+		double prodPrincipala = 1;
+		double prodSecundara = 1;
+		double impartDiag = 1;
+		
+		for (int i = 0; i < matrice.length ;i++){
+		prodPrincipala = matrice[i][i]* prodPrincipala;
+		int k1 = (matrice.length-1)-i;
+		prodSecundara = matrice[i][k1]* prodSecundara; 
+		impartDiag = prodPrincipala/prodSecundara;
+		}
+		
+		System.out.println(prodPrincipala);
+		System.out.println(prodSecundara);
+		System.out.println("Impartirea diagonalelor este: " + impartDiag);
 		
 		//Creati un vector de cuvinte, apoi concatenati-le pentru a alcatui 2 propozitii corecte dpdv gramatical (si afisati-le)
 		
+		String[]vectCuvinte = {
+				"Ana" , "mere" , "fluturi" , "are", "Alex", "prinde", "fluturi"
+				};
+		System.out.println(vectCuvinte[0] + " " + vectCuvinte[3]+ " "+vectCuvinte[1] );
+		System.out.println(vectCuvinte[4]+ " "+ vectCuvinte[5]+ " "+ vectCuvinte[6]);
+			
+	{
 		
 		//Calculati (printr-o instructiune repetitiva) si afisati 8! (factorial)
-		
-		
+
+        int fact=1;
+        for(int i = 8; i >= 1; i--){
+            fact*= i;
+            }
+        System.out.println("8 factorial este: " + fact);
+        
+        {
+        	
 		double[] vectorFain = {2.1,5.4,4.3,9.8,7.11,4.13,8,9,-4.2,48};
 		//Folosind vectorFain, creati un alt vector al carui elemente sa fie egale cu formula (element * pozitieElement) din vectorul principal
 		//ex: vectorNou[0] = 2.1 (elementul de pe pozitia 0 din vectorFain) * 0 (pozitia lui)
 		//ex2: vectorNou[4] = 7.11 * 4 ...etc
-
-	}
-
-}
+		
+		
+		double vectorNou[] = new double[vectorFain.length];
+		
+		System.out.println( "Vectorul nou este: ");
+		
+		for( int i = 0; i < vectorFain.length; i++)
+		     {
+		         vectorNou[i] = vectorNou[i] * i; 
+		         	System.out.print (vectorFain[i] + "\t");
+		     }
+		
+}}}}
