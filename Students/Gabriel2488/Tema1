@@ -1,0 +1,135 @@
+import java.util.Arrays;
+
+/**
+ *
+ * @author exe
+ */
+public class clasa2 {
+
+    public static void main(String[] args) {
+        int x = 100;
+        int suma = 0;
+        for (int i = 0; i <= x; i++) {
+            if (i % 2 == 0) {
+
+                suma = suma + i;
+
+            }
+
+        }
+        System.out.println("Exercitiu 1");
+        System.out.println(suma);
+
+        //EXERCITIU 2 
+        int[] numereFaine = {1, 2, 3, 8, 50, 120, 400, 7, 3, 3, 90, -4, -124, 824, 0};
+        int celmaimare = numereFaine[0];
+        int celmaimic = numereFaine[0];
+        int sumaNumere = 0;
+        for (int i = 0; i < numereFaine.length; i++) {
+
+            if (numereFaine[i] > celmaimare) {
+                celmaimare = numereFaine[i];
+            }
+
+            else if (numereFaine[i] < celmaimic) {
+                celmaimic = numereFaine[i];
+
+            }
+            sumaNumere = sumaNumere + i;
+        }
+        System.out.println("\nExercitiu 2");
+        System.out.println("Cel mai mare " + celmaimare);
+        System.out.println("Cel mai mic " + celmaimic);
+        System.out.println("Media aritmetica " + suma / numereFaine.length);
+
+        //EXERCITIU 3
+        System.out.println("\nExercitiu 3");
+        String[] cuvinte = {"nume", "mers", "activitate", "sofer", "tablou", "caiet", "program"};
+
+        for (int i = 0; i < cuvinte.length; i++) {
+
+            cuvinte[i] = "pre" + cuvinte[i] + "lui";
+
+            System.out.print(cuvinte[i] + ", ");
+        }
+
+        //EXERCITIU 4
+        System.out.println("\nExercitiu 4");
+        int numarator = 7;
+        int numitor = 3;
+        int cat = numarator / numitor;
+        int rest = numarator % numitor;
+        System.out.println("Catul este " + cat + " iar restul este " + rest);
+
+        //EXERCITIU 5
+        System.out.println("\nExercitiu 5");
+        for (int i = 0; i < numereFaine.length; i++) {
+            if (numereFaine[i] % 2 != 0) {
+
+                numereFaine[i] = 0;
+
+            }
+            System.out.print(numereFaine[i] + ", ");
+
+        }
+
+        //EXERCITIU 6
+        System.out.println("\n\nExercitiu 6");
+        int[][] matrice = new int[2][2];
+        matrice[0][0] = 1;
+        matrice[0][1] = 2;
+        matrice[1][0] = 2;
+        matrice[1][1] = 7;
+
+        int sumap = 0;
+        int sumas = 0;
+
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice[i].length; j++) {
+                if (i == j) {
+                    sumap += matrice[i][i];
+                }
+
+            }
+        }
+
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice.length; j++) {
+                if ((i + j) == (matrice.length - 1)) {
+                    sumas += matrice[i][j];
+                }
+            }
+        }
+
+        System.out.println("Suma diagonalei principale " + sumap);
+        System.out.println("Suma diagonalei secundare este " + sumas);
+        System.out.println("Suma principala/Suma secundara " + sumap / sumas);
+
+        //EXERCITIU 7 nefacut
+        System.out.println("\nExercitiu 7");
+
+        String[] cuvinte2 = {"Java ", "este ", "un ", "limbaj ", "de ", "programare ", "OOP"};
+
+        System.out.print(cuvinte2[0] + cuvinte2[1] + cuvinte2[2] + cuvinte2[3] + cuvinte2[4] + cuvinte2[5] + cuvinte2[6]);
+        
+        //EXERCITIU 8
+        
+        System.out.println("\n\nExercitiu 8");
+        int i;
+        int factorial = 1;
+        for (i = 1; i <= 8; i++) {
+            factorial = factorial * i;
+            System.out.println(i + " factorial = " + factorial);
+        }
+
+        //EXERCITIU 9
+        System.out.println("\nExercitiu 9");
+
+        double[] vectorFain = {2.1, 5.4, 4.3, 9.8, 7.11, 4.13, 8, 9, -4.2, 48};
+        for (i = 0; i < vectorFain.length; i++) {
+
+            vectorFain[i] = vectorFain[i] * i;
+            System.out.println(vectorFain[i]);
+        }
+    }
+}
