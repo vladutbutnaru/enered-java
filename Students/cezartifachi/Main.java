@@ -1,190 +1,108 @@
-package ro.enered.examples;
+package com.enered.examples;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// In acest exemplu vom exersa lucrul cu primitivele din limbajul Java, cu operatiile de baza, cu conditionalele, cu structurile repetitive si cu vectorii
-		
-		//Exemplul 1: Declarati 2 numere intregi si afisati suma lor
-		int a = 5;
-		int b = 7;
-		int suma = a+b;
-		System.out.println("Exemplul 1: Suma celor dou numere este: " + suma);
-		
-		//Exemplul 2: Declarati 4 numere reale si afisati rezultatul inmultirii lor
-		double a1 = 3.5;
-		double b1 = 4.5;
-		double c1 = 5.5;
-		double d1 = 6.5;	
-		double inmultire = a1*b1*c1*d1;
-		System.out.println("Exemplul 2: Rezultatul inmultirii celor patru numere este: " + inmultire);
-		
-		//Exemplul 2b: Declarati 2 numere intregi si afisati catul si restul impartirii lor
-		int a2 = 10;
-		int b2 = 4;
-		int cat = a2/b2;
-		int rest = a2%b2;
-		System.out.println("Exemplul 2b: Catul impartirii celor doua numere este " + cat + " iar restul impartirii celor doua numere este " + rest);
-		
-		//Exemplul 3: Declarati 2 numere intregi pozitive si unul negativ si afisati rezultatul adunarii primelor 2, inmultit cu al treilea numar (cel negativ)
-		int a3 = 4;
-		int b3 = 5;
-		int c3 = -2;
-		int rezultat = (a3+b3)*c3;
-		System.out.println("Exemplul 3: Rezultatul este: " + rezultat);
-		
-		//Exemplul 4: Declarati 2 variabile de tip String si concatenati-le, astfel incat sa afisati textul "Ma numesc " + nume + " si invat " + curs
-		String nume = "Cezar";
-		String curs = "Java";
-		System.out.println("Exemplul 4: Ma numesc " + nume + " si invat " + curs + "!");
-		
-		//Exemplul 5: Declarati 2 numere intregi si afisati-l pe cel mai mare
-		int a4 = 5;
-		int b4 = 9;
-		if (a4>b4) {
-		System.out.println("Exemplul 5: Numarul mai mare este: " + a4);
+	public static void main(String args[]) {
+		int x = 100;
+		//Calculati si afisati suma primelor x numere pare (folosind o structura repetitiva
+		int suma = 0;
+		int nr = 2;
+		while (nr <=100){
+			suma = suma + nr;
+			nr = nr +2;
 		}
-		else {
-		System.out.println("Exemplul 5: Numarul mai mare este: " + b4);
-		}
-		//Exemplul 5b: Declarati 2 numere intregi pozitive care reprezinta lungimile laturilor unui triunghi dreptunghic. Calculati si afisati aria acestuia
-		int a5 = 3;
-		int b5 = 4;
-		int aria = a5*b5/2;
-		System.out.println("Exemplul 5b: Rezultatul este: " + aria);
-		
-		//Exemplul 6: Declarati 2 numere intregi si afisati textul "Numarul " + nr1 " este mai mare decat numarul " + nr2, in functie de relatia dintre cele 2
-		int nr1 = 7;
-		int nr2 = 10;
-		if (nr1>nr2) {
-			System.out.println("Exemplul 6: Numarul " + nr1 + " este mai mare decat numarul " + nr2 );
-		}
-		else {
-			System.out.println("Exemplul 6: Numarul " + nr2 + " este mai mare decat numarul " + nr1);
-		}
-		
-		//Exemplul 7: Declarati o variabile de tip boolean care sa fie true daca cele doua numere declarate in exemplul anterior sunt egale
-		boolean numar = true;
-		if (nr1==nr2) {
-			System.out.println("Exemplul 7: Numerele sunt egale");
-		}
-		else {
-			System.out.println("Exemplul 7: Numerele nu sunt egale");
-		}
-		//Exemplul 8: Determinati si afisati rezultatul ridicarii la putere a doua numere intregi (declarate de voi), folosind operatiunea "for"
-		int a6 = 2;
-		int b6 = 3;
-		int c6 = 1;
-			for (int i = 0; i<b6; i++)
-			c6 = c6*a6;
-		System.out.println("Exemplul 8: " + c6);
-		
-		
-		//Exemplul 8b: Declarati un numar intreg si gasiti si afisati, printr-o instructiune repetitiva si una de decizie, cel mai mare numar par, mai mic sau egal cu cel initial
-		int a7 = 19;
-		for (int j  = a7-1; j>=2; j--) {
-		if (j%2==0){
-			System.out.println("Exemplul 8b: " + j);
-			break;
-		}
-		}
-		//Exemplul 9: Declarati 2 numere intregi si verificati rezultatul adunarii lor astfel: daca este 4, atunci afisati "Numerele sunt bune", daca este 8, afisati "Numerele sunt okay", iar in orice alt caz afisati "Numere nu sunt bune"
-		int a8 = 3;
-		int b8 = 4;
-		switch(a8+b8){
-		case 4:
-			System.out.println("Exemplul 9: Numerele sunt bune");
-			break;
-		case 8:
-			System.out.println("Exemplul 9: Numerele sunt okay");
-		default:
-			System.out.println("Exemplul 9: Numere nu sunt bune");
-		}
-		
-		//Exemplul 10: Declarati un vector de numere intregi de dimensiune 8. Adaugati, utilizand o instructiune repetitiva, numerele de la 1 la 8, in ordine crescatoare
-			int A[] = new int[8];
-			for (int i=0; i<8; i++) {
-				A[i] = i+1;
-				System.out.println("Exemplul 10:" + A[i]);
-			}
-		
-		//Exemplul 10b: Declarati un vector cu 4 elemente (2 negative si 2 pozitive), calculati si afisati suma elementelor pozitive
-			int B[] = new int[4];
-			B[0] = -4;
-			B[1] = 3;
-			B[2] = -5;
-			B[3] = 6;
-			int sum = 0;
-			for (int k = 0; k < 4; k++){
-				if (B[k]>=0) {
-				sum = sum + B[k];
-				}
-			}
-			System.out.println("Exemplul 10b: " + sum);
-			
-			
-			
+			System.out.println("Suma primelor x numere pare este: " + suma);
 	
-		//Exemplul 10c: Afisati vectorul declarat anterior. Apoi afisati-l in ordinea inversa a elementelor (utilizand o instructiune repetitiva)
-		for (int l =0; l<4; l++) {
-			System.out.println("Exemplul 10c: " + B[l]);
-					
+		int[] numereFaine = {1,2,3,8,50,120,400,7,3,3,90,-4,-124,824,0};
+		//Fie vectorul numereFaine. Calculati si afisati minimul, maximul si media aritmetica a elementelor lui.
+		int min =0;
+		int max =0;
+		int mediearitm = 0;
+		int suma2 = 0;
+		for (int i=0; i<numereFaine.length; i++){
+			if (numereFaine[i]>max){
+				max = numereFaine[i];
+		}else if (numereFaine[i]<min){
+			min = numereFaine[i];
 		}
-		for (int m = 3; m>=0; m--)
-		System.out.println("Exemplul 10c': " + B[m]);
-		//Exemplul 11: Declarati un vector de numere reale de dimensiune 4. Adaugati manual 4 elemente in acest vector si afisati-l.
-		double C[] = new double[4];
-		C[0] = 19.8;
-		C[1] = 5.6;
-		C[2] = 4.9;
-		C[3] = 14.4;
-		
-		for (int n = 0; n<4; n++) {
-		System.out.println("Exemplu 11: " + C[n]);
+			suma2 += numereFaine[i];
 		}
+		mediearitm = suma2/numereFaine.length;
+				System.out.println("Numarul minim este: " + min);
+				System.out.println("Numarul maxim este: " + max);
+				System.out.println("Media aritmetica este: " + mediearitm);
+				
+		String[] cuvinte = {"nume","mers","activitate","sofer","tablou","caiet","program"};
+		//Fie vectorul cuvinte. Adaugati fiecarui cuvant din el prefixul "pre" si sufixul "lui" si afisati-le, despartite prin caracterul ","
 		
-		
-		//Exemplul 12: Cautati si afisati cel mai mare element din vectorul declarat anterior.
-		double max = 0;
-		for (int q = 0; q<4; q++) {
-			if (C[q]>max) {
-				max = C[q];
-				System.out.println("Exemplul 12: Cel mai mare element din vectorul declarat este:" + max);
-			}			
+		for (int i =0; i<cuvinte.length; i++){
+			cuvinte[i] = "pre " + cuvinte[i] + " lui ";
+			System.out.print(cuvinte[i] + ",");
 		}
-		//Exemplul 13: Declarati un vector de obiecte de tip String, de orice dimensiune, populati-o cu cuvinte random si, utilizand o instructiune repetitiva, adaugati, la finalul fiecarui cuvant, sufixul "ului"
-			String D[] = new String[4]; 
-			D[0] = "Copil";
-			D[1] = "Cal";
-			D[2] = "Oras";
-			D[3] = "Castel";
-			for (int r = 0; r<4; r++) {
-				D[r] = D[r] + "ului";
-			System.out.println("Exemplul 13: " + D[r]);
-			}
+			System.out.println("");
 			
-	
+		int numarator = 7;
+		int numitor = 3;
+		//Avand numaratorul si numitorul de mai sus, calculati si afisati catul si restul impartirii lor
+		int cat = numarator/numitor;
+		int rest = numarator%numitor;
+		System.out.println("Catul impartirii celor doua numere este: " + cat + " iar restul este: "+ rest);
 		
-		//Exemplul 14: Declarati doi vectori de minim 3 numere intregi si, utilizand instructiuni repetitive si decizionale, afisati pe ecran cate elemente au in comun
-		int E[] = {1,2,3};
-		int F[] = {4,5,2};
-		for (int r =0; r<3; r++){
-			if (E[0]==F[r]){
-				System.out.println("Exemplul 14: Elementele comune sunt: " + F[r]);
-			}else if (E[1]==F[r]){
-				System.out.println("Exemplul 14: Elementele comune sunt: " + F[r]);
-			}else if (E[2]==F[r]){
-				System.out.println("Exemplul 14: Elementele comune sunt: " + F[r]);
-				}
-			}
-	
 		
-		//Exemplul 15: Declarati o matrice patratica de numere intregi (2,2) si populati-o cu valori de 0. Apoi setati valoarea de pe pozitia 1,2 sa fie 1
-		int w[][] = { {0,0}, {0,0} };
-		w[0][1] = 1;
-			
+		//Folosind vectorul numereFaine de mai sus, inlocuiti elementele impare cu numarul 0
+		
+		for (int i= 0; i<numereFaine.length; i++){
+			if (numereFaine[i]%2==0){
+				numereFaine[i] = 0;
 			}	
 		}
-
-	
 		
+		int[][] matrice = new int[2][2];
+		matrice[0][0] = 1;
+		matrice[0][1] = 2;
+		matrice[1][0] = 2;
+		matrice[1][1] = 7;
+		
+		//Avand matricea de mai sus, calculati si afisati produsul numerelor de pe diagonala principala, impartit la produsul numerelor de pe diagonala secundara
+		double produsdiag1, produsdiag2, rezultat;
+		produsdiag1 = 1;
+		produsdiag2 = 1;
+		rezultat = 0;
+		for (int h =0; h<matrice.length; h++){
+			produsdiag1 = produsdiag1 * matrice[h][h];
+			int j = (matrice.length -1)-h;
+			produsdiag2 = produsdiag2*matrice[h][j];
+			
+		}
+		rezultat = produsdiag1/produsdiag2;
+		System.out.println("Rezultatul impartirii celor doua diagonale este: " + rezultat);
+		
+		
+		
+		//Creati un vector de cuvinte, apoi concatenati-le pentru a alcatui 2 propozitii corecte dpdv gramatical (si afisati-le)
+		String cuvintelesunt[] = {"Cezar", "este", "catel", "are", "invata", "un", "Java"};
+		System.out.println("Prima propozitie este: " + cuvintelesunt[0] + " " + cuvintelesunt[4] + " " + cuvintelesunt[6]);
+		System.out.println("A doua propozitie este: " + cuvintelesunt[0] + " " + cuvintelesunt[3] + " " + cuvintelesunt[5] + " " + cuvintelesunt[2]);
+		
+				
+		//Calculati (printr-o instructiune repetitiva) si afisati 8! (factorial)
+		
+		int rezultat2 = 1;
+		for (int m = 8; m >=1;m--){
+			rezultat2 *= m;
+		}
+		System.out.println("Rezultatul lui 8! este: " + rezultat2);
+		
+		double[] vectorFain = {2.1,5.4,4.3,9.8,7.11,4.13,8,9,-4.2,48};
+		//Folosind vectorFain, creati un alt vector al carui elemente sa fie egale cu formula (element * pozitieElement) din vectorul principal
+		//ex: vectorNou[0] = 2.1 (elementul de pe pozitia 0 din vectorFain) * 0 (pozitia lui)
+		//ex2: vectorNou[4] = 7.11 * 4 ...etc
+		double vectorNou[] = new double[vectorFain.length];
+		for (int w =0; w<vectorFain.length; w++){
+			vectorNou[w] = vectorFain[w]*w;
+			System.out.println(vectorNou[w]);
+		}
+		
+	}
+	}
+
