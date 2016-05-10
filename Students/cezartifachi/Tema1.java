@@ -96,8 +96,10 @@ public class Main {
 			break;
 		case 8:
 			System.out.println("Exemplul 9: Numerele sunt okay");
+			break;
 		default:
 			System.out.println("Exemplul 9: Numere nu sunt bune");
+			break;
 		}
 		
 		//Exemplul 10: Declarati un vector de numere intregi de dimensiune 8. Adaugati, utilizand o instructiune repetitiva, numerele de la 1 la 8, in ordine crescatoare
