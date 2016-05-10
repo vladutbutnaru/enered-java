@@ -52,7 +52,7 @@ public class Main {
 		//Folosind vectorul numereFaine de mai sus, inlocuiti elementele impare cu numarul 0
 		
 		for (int i= 0; i<numereFaine.length; i++){
-			if (numereFaine[i]%2==0){
+			if (numereFaine[i]%2==1){
 				numereFaine[i] = 0;
 			}	
 		}
