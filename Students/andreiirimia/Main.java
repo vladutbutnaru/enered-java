@@ -1,142 +1,197 @@
-package ro.enered.examples;
+package ro.enered.sesiune3;
 
 public class Main {
-	public static void main(String args[]) {
-		// In acest exemplu vom exersa lucrul cu primitivele din limbajul Java,
-		// cu operatiile de baza, cu conditionalele, cu structurile repetitive
-		// si cu vectorii
 
-		// Exemplul 1: Declarati 2 numere intregi si afisati suma lor
-		int a = 4;
-		int b = 7;
-		int s = a + b;
-		System.out.println(s);
+	public static void main(String[] args) {
+		String[] animale = { "caine", "pisica", "tigru", "sarpe", "peste", "veverita" };
+		// Folosind o structura de tip Switch, Case, Break, verificati cuvintele
+		// din vectorul animale astfel:
+		// Daca este animal domestic (Caine, Pisica, Peste) - afisati pe ecran
+		// animale[x] (pozitia curenta) " este animal domestic"
+		// Daca ne aflam in cazul Tigru sau Sarpe - afisati pe ecrane animale[x]
+		// " este animal salbatic"
+		// In orice alt caz afisati "Nu stim ce tip de animal este " +
+		// animale[x]
+		// : INSEAMNA DIN
+		for (String x : animale) {
+			switch (x) {
+			case "caine":
+			case "pisica":
+			case "veverita":
+				System.out.println(x + " este animal domestic");
+				break;
+			case "tigru":
+			case "sarpe":
+				System.out.println(x + " este animal salbatic");
+				break;
+			default:
+				System.out.println(x + " nu stiu ce  animal este");
+				break;
 
-		// Exemplul 2: Declarati 4 numere reale si afisati rezultatul inmultirii
-		// lor
-
-		double c = 4.1;
-		double d = 4.2;
-		double e = 4.3;
-		double f = 4.4;
-		double g = c * d * e * f;
-		System.out.println(g);
-
-		// Exemplul 2b: Declarati 2 numere intregi si afisati catul si restul
-		// impartirii lor
-		float h = 6;
-		float i = 5;
-		float j = h / i;
-		System.out.println(j);
-
-		// Exemplul 3: Declarati 2 numere intregi pozitive si unul negativ si
-		// afisati rezultatul adunarii primelor 2, inmultit cu al treilea numar
-		// (cel negativ)
-
-		int k = 7;
-		int l = 7;
-		int m = -8;
-		int n = (k + l) * m;
-		System.out.println(n);
-
-		// Exemplul 4: Declarati 2 variabile de tip String si concatenati-le,
-		// astfel incat sa afisati textul "Ma numesc " + nume + " si invat " +
-		// curs
-		String nume = "Alabala";
-		String curs = "info";
-		System.out.println("Ma numesc " + nume + " si invat " + curs);
-
-		// Exemplul 5: Declarati 2 numere intregi si afisati-l pe cel mai mare
-		int o = 13;
-		int p = 47;
-		if (o > p) {
-			System.out.println(o);
+			}
+		}
+		int a = 8;
+		// Folosind o conditionala cu conditii multiple, daca numarul stocat in
+		// variabila a este mai mic decat 10 si mai mare decat 8, afisati
+		// Textul "Numarul este bun", altfel, afisati textul "Numarul nu este
+		// bun"
+		if (a < 10 && a > 8) {
+			System.out.println("Numarul este bun");
 		} else
-			System.out.println(p);
+			System.out.println("Numarul nu este bun");
 
-		// Exemplul 5b: Declarati 2 numere intregi pozitive care reprezinta
-		// lungimile laturilor unui triunghi dreptunghic. Calculati si afisati
-		// aria acestuia
-		int cateta1 = 2;
-		int cateta2 = 4;
-		int aria = cateta1 * cateta2;
-		System.out.println(aria + " salut");
+		// alt mod de lucru
 
-		// Exemplul 6: Declarati 2 numere intregi si afisati textul "Numarul " +
-		// nr1 " este mai mare decat numarul " + nr2, in functie de relatia
-		// dintre cele 2
+		switch (a) {
+		case 9:
+			System.out.println("Numarul este bun");
+			break;
 
-		int y = 4;
-		int z = 5;
-		if (y > z) {
-			System.out.println("Numarul " + y + " este mai mare decat numarul" + z);
-		} else
-			System.out.println("Numarul " + z + " este mai mare decat numarul " + y);
+		// pentru toate celelalte cazuri cand a=9 e mai mare ca 8 si mai mic ca
+		// 10
+		default:
+			System.out.println("Numarul nu este bun");
 
-		// Exemplul 7: Declarati o variabile de tip boolean care sa fie true
-		// daca cele doua numere declarate in exemplul anterior sunt egale
-		Boolean magic;
-		if (y == z) {
-			magic = true;
+		}
+		// Calculati si afisati suma armonica. Formula este: harmonic(x) = 1 +
+		// 1/2 + 1/3 + 1/4 + ...+ 1/x
+		int n = 15;
+		double arm = 0.00;
+		for (int x = 1; x <= n; x++) {
+			arm += (1 / (double) x);
+			// putem scrie si arm+= double(1/x);
+		}
+		System.out.println(arm);
+
+		// Daca aceasta este mai mare decat 1.3 sau este mai mica decat 3,
+		// afisati patratul acesteia
+		if (arm > 1.3 || arm < 3) {
+			System.out.println(arm * arm);
+		}
+
+		else
+			System.out.println("nunun");
+		// Afisati, folosind 2 structuri repetitive, un patrat de 5/5, care
+		// contine doar elemente "#".
+		int i;
+		int j1;
+
+		// i 01234 sunt 5 in total
+		for (i = 0; i <= 4; i++) {
+			for (j1 = 0; j1 <= 4; j1++)
+				System.out.print("#");
+
+			System.out.println();
+		}
+		System.out.println();
+
+		// Apoi, folosind acelasi patrat, inlocuiti elementele de pe diagonala
+		// principala cu "*";
+		for (i = 0; i <= 4; i++) {
+			for (j1 = 0; j1 <= 4; j1++) {
+				if (i == j1)
+					System.out.print("*");
+				else
+					System.out.print("#");
+			}
+
+			System.out.println();
+		}
+		// Construiti si afisati tabla inmultirii lui 9
+		/*
+		 * * | 1 2 3 4 5 6 7 8 9 ------------------------------- 1 | 1 2 3 4 5 6
+		 * 7 8 9 2 | 2 4 6 8 10 12 14 16 18 3 | 3 6 9 12 15 18 21 24 27 4 | 4 8
+		 * 12 16 20 24 28 32 36 5 | 5 10 15 20 25 30 35 40 45 6 | 6 12 18 24 30
+		 * 36 42 48 54 7 | 7 14 21 28 35 42 49 56 63 8 | 8 16 24 32 40 48 56 64
+		 * 72 9 | 9 18 27 36 45 54 63 72 81
+		 * 
+		 * 
+		 */
+
+		System.out.println("*\t|\t1\t2\t3\t4\t5\t6\t7\t8\t9\n");
+		System.out.println("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-");
+
+		int[][] inmultire = new int[9][9];
+		for (int x = 0; x < inmultire.length; x++) {
+			System.out.print((x + 1) + "\t|\t");
+			for (int y = 0; y < inmultire.length; y++) {
+				inmultire[x][y] = (x + 1) * (y + 1);
+				System.out.print(inmultire[x][y] + "\t");
+
+			}
+			System.out.println();
+		}
+		int m = 1234994;
+		int n1 = 0;
+		while (m > 0) {
+			n1 = n1 * 10 + m % 10;
+			m = m / 10;
+		}
+	
+	// Calculati si afisati inversul numarului m (4994321).
+	// Formati un numar nou, utilizand doar cifrele pare ale numarului m.
+	// Daca noul numar are un numar impar de cifre si ele sunt mai mici
+	// decat 9 (toate), afisati "OK", altfel, afisati "KO"
+
+	int h = 3;
+	int min = 30;
+	// Mai sus aveti 2 variabile care semnifica un cronometru care porneste de
+	// la 3 ore, 30 de minute.
+	// Afisati, folosind structuri repetitive, toate iteratiile prin care trece
+	// acest cronometru (sub forma h:min), pana ajunge la 2 ore si 50 de minute
+	while(h>=0)
+	{
+		System.out.println(h + ":" + min);
+		if (min > 0) {
+			min -= 1;
 		} else {
-			magic = false;
+			h -= 1;
+			min = 59;
 		}
-		System.out.println(magic);
-		// Exemplul 8: Determinati si afisati rezultatul ridicarii la putere a
-		// doua numere intregi (declarate de voi), folosind operatiunea "for"
-
-		int q1 = 2;
-		int q2 = 3;
-		int q3 = 1;
-		for (int i1 = 0; i1 < q2; i1++)
-			q3 = q3 * q1;
-		System.out.println(q3);
-
-		// Exemplul 8b: Declarati un numar intreg si gasiti si afisati, printr-o
-		// instructiune repetitiva si una de decizie, cel mai mare numar par,
-		// mai mic sau egal cu cel initial
-		int w = 9;
-		int max = 0;
-		for (i = 0; i <= w; i++)
-			;
-		if (i % 2 == 0 && i <= 9) {
-			max = 1;
-
+		if (h == 2 && min == 50) {
+			break;
 		}
-
-		// Exemplul 9: Declarati 2 numere intregi si verificati rezultatul
-		// adunarii lor astfel: daca este 4, atunci afisati "Numerele sunt
-		// bune", daca este 8, afisati "Numerele sunt okay", iar in orice alt
-		// caz afisati "Numere nu sunt bune"
-
-		// Exemplul 10: Declarati un vector de numere intregi de dimensiune 8.
-		// Adaugati, utilizand o instructiune repetitiva, numerele de la 1 la 8,
-		// in ordine crescatoare
-
-		// Exemplul 10b: Declarati un vector cu 4 elemente (2 negative si 2
-		// pozitive), calculati si afisati suma elementelor pozitive
-
-		// Exemplul 10c: Afisati vectorul declarat anterior. Apoi afisati-l in
-		// ordinea inversa a elementelor (utilizand o instructiune repetitiva)
-
-		// Exemplul 11: Declarati un vector de numere reale de dimensiune 4.
-		// Adaugati manual 4 elemente in acest vector si afisati-l.
-
-		// Exemplul 12: Cautati si afisati cel mai mare element din vectorul
-		// declarat anterior.
-
-		// Exemplul 13: Declarati un vector de obiecte de tip String, de orice
-		// dimensiune, populati-o cu cuvinte random si, utilizand o instructiune
-		// repetitiva, adaugati, la finalul fiecarui cuvant, sufixul "ului"
-
-		// Exemplul 14: Declarati doi vectori de minim 3 numere intregi si,
-		// utilizand instructiuni repetitive si decizionale, afisati pe ecran
-		// cate elemente au in comun
-
-		// Exemplul 15: Declarati o matrice patratica de numere intregi (2,2) si
-		// populati-o cu valori de 0. Apoi setati valoarea de pe pozitia 1,2 sa
-		// fie 1
-
 	}
 
+	// Mai sus aveti 3 variabile care semnifica un cronometru care porneste
+	// de la 3 ore, 30 de minute.
+	// Afisati, folosind structuri repetitive, toate iteratiile prin care
+	// trece acest cronometru (sub forma h:min), pana ajunge la 2 ore si 50
+	// de minute
+
+	// Gasiti cea mai mare cifra a numarului 9 factorial
+
+	// Formati un numar din prima si ultima cifra a ariei unui triunghi
+	// dreptunghic cu catetele egale cu 18;
+
+	int x = 7;
+	int y = 194;
+	/*
+	 * Folosind operatorul conditional, calculati de cate sticle de cate x litri
+	 * fiecare este nevoie pentru a umple un vas de y litri. Exemplu: daca x=4
+	 * si y=20 , atunci e nevoie de 5 sticle daca x=4 si y=23 , atunci e nevoie
+	 * de 6 sticle
+	 */
+
+	int xq = 3;
+	int r = 100;
+
+	if(r%xq==0)
+	{
+		System.out.println(r / xq);
+	}else System.out.println(r/xq+1);
+
+	int j = 1024534;
+	// Se citeste un numar natural j. Sa se determine daca este cub perfect.
+
+	int k = 13;
+	/*
+	 * Se afiseze pe ecran un triunghi de forma:
+	 * 
+	 ** 
+	 *** 
+	 * ..... ...* (k caractere *)
+	 * 
+	 */
+}
 }
