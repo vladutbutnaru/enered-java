@@ -1,5 +1,3 @@
-package ro.enered.java.homework1;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,6 +12,8 @@ public class Main {
 	            nr = nr+2;
 		 }
 		 System.out.println(suma);
+		 //CORECTAT: suma primelor x numere pare, nu suma numerelor pare mai mici decat x;
+		 
 		 
 		int[] numereFaine = {1,2,3,8,50,120,400,7,3,3,90,-4,-124,824,0};
 		
@@ -142,5 +142,6 @@ public class Main {
 		         vectorNou[i] = vectorNou[i] * i; 
 		         	System.out.print (vectorFain[i] + "\t");
 		     }
+		//CORECTAT: Trebuie sa calculezi din nou elementele din vectorNou - cele pe care le afisezi sunt exact cele din vectorFaina
 		
 }}}}

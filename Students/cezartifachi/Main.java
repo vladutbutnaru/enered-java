@@ -1,6 +1,4 @@
-package com.enered.examples;
-
-public class Main {
+public  class Main {
 
 	public static void main(String args[]) {
 		int x = 100;
@@ -12,7 +10,7 @@ public class Main {
 			nr = nr +2;
 		}
 			System.out.println("Suma primelor x numere pare este: " + suma);
-	
+	//CORECTAT: Suma primelor x numere pare, nu suma numerelor pare mai mici decat x
 		int[] numereFaine = {1,2,3,8,50,120,400,7,3,3,90,-4,-124,824,0};
 		//Fie vectorul numereFaine. Calculati si afisati minimul, maximul si media aritmetica a elementelor lui.
 		int min =0;
@@ -105,4 +103,3 @@ public class Main {
 		
 	}
 	}
-
