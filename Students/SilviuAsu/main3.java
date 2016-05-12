@@ -15,18 +15,37 @@ public class main3 {
 			case"sarpe":
 			case"tigru":
 			case"veverita":
-				System.out.println(x + " nu este animal domestic");
+				System.out.println(x + " este animal salbatic");
 				break;
 			}
 		}
+		
 	//Daca ne aflam in cazul Tigru sau Sarpe - afisati pe ecrane animale[x] " este animal salbatic"
 		
 	//In orice alt caz afisati "Nu stim ce tip de animal este " + animale[x]
+		
+		
+		
+		
+		
 		
 		int a = 8;
 		int b = 10;
 		//Folosind o conditionala cu conditii multiple, daca numarul stocat in variabila a este mai mic decat 10 si mai mare decat 8, afisati 
 		//Textul "Numarul este bun", altfel, afisati textul "Numarul nu este bun"
+		switch (a){
+		case 9:
+			System.out.println("Numarul este bun");
+			break;
+		default:
+			System.out.println("Numarul nu este bun");
+		}
+		
+		
+		
+		
+		
+		
 		
 		int n = 15;
 		double arm = 0;
@@ -92,6 +111,7 @@ public class main3 {
 			m = m/10;
 		}
 		System.out.println(+n1); 
+		
 		int h = 3;
 		int min = 30;
 		//Mai sus aveti 2 variabile care semnifica un cronometru care porneste de la 3 ore, 30 de minute.
@@ -111,27 +131,65 @@ public class main3 {
 		}
 		
 		//Gasiti cea mai mare cifra a numarului 9 factorial
-		
-		
+		int n2 = 9;
+        int fact = 1;
+        for (int i = 1; i <= n2; i++) {
+            fact *= i;
+           
+        }
+        System.out.println(fact);
+        
 		//Formati un numar din prima si ultima cifra a ariei unui triunghi dreptunghic cu catetele egale cu 18;
+        int c = 18;
+        int n3 = 0;
+        int aria = (c * c)/2;
+        int lnr= aria%10;
+        int fnr =0;
+		while (aria>0){
+			n3=n3*10 + aria%10;
+			aria = aria/10;
+		}
+		if(n3 > 0) {
+			fnr = n3%10;
+		}
+		System.out.println(fnr*10 + lnr);		
+		
+		
+		
 		
 		int x = 7;
 		int y = 194;
+		double nrsticle = y/x;
 		/*Folosind operatorul conditional, calculati de cate sticle de cate x litri fiecare este nevoie pentru a umple un vas de y litri. 
 		Exemplu: 
 		daca x=4 si y=20 , atunci e nevoie de 5 sticle 
 		daca x=4 si y=23 , atunci e nevoie de 6 sticle
+		
 		*/
+		if (nrsticle%2!=0){
+			System.out.println(nrsticle+1);
+		}
 		
 		
-		int j = 1024534;
+		
+		
 		//Se citeste un numar natural j. Sa se determine daca este cub perfect.
-		
-		int k = 13;
+		int j = 1024534;
+        double cub = Math.cbrt(j);
+        System.out.println(cub);
+        double r = Math.round(cub);
+        if (j==r * r * r) {
+            System.out.println(j + " este cub perfect");
+        }
+        else {
+            System.out.println(j + " nu este cub perfect");
 
+        }
+		
+		
 
 	    /*
-	     * Se afiseze pe ecran un triunghi de forma: 
+	     * Se afiseze pe ecran un triunghi de forma:
 * 
 ** 
 *** 
@@ -139,5 +197,24 @@ public class main3 {
 ***...* (k caractere *)
 	     * 
 	     */
+        for(int i=0;i<14;i++) {
+            for(int j4=0;j4<14-i;j4++) {
+                System.out.print(" ");
+
+            }
+           for(int k=0;k<=i;k++) {
+               
+               if (i==12){
+             	   System.out.print(". ");
+                }
+               else{
+            	   System.out.print("* ");
+               }
+
+           }
+
+           System.out.println();  
+       }
+
 	}
 }
