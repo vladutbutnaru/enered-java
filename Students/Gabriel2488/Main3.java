@@ -169,13 +169,7 @@ public class Main3 {
 
         }
 
-        int numar = 27;
-        for (int cub1 = 1; cub1 < numar; cub1++) {
 
-            if ((cub1 % 3 == 0) && (cub1 * cub1 * cub1 == numar)) {
-                System.out.println("Cubul este " + cub1);
-
-            }
         }
     }
 }
