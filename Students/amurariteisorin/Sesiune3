@@ -130,10 +130,21 @@ public class Main {
 			//Calculati si afisati inversul numarului m (4994321).
 			//Formati un numar nou, utilizand doar cifrele pare ale numarului m.
 			//Daca noul numar are un numar impar de cifre si ele sunt mai mici decat 9 (toate), afisati "OK", altfel, afisati "KO"
-			int n1 = 0;
-			while  (m>0){
-				n1 = n1*10 + m%10;
+			int nrnou =0;
+			while (m > 0){
+				nrnou = nrnou*10 + m%10;
 				m = m/10;
+			}
+			System.out.println(nrnou);
+			
+			while(nrnou>0){
+			if((nrnou%10)%2==0 && nrnou < 9){
+			System.out.println("OK");  
+			}else{
+				System.out.println("KO");
+				}
+			break;
+			} 
 			}
 			
 			int h = 3;
