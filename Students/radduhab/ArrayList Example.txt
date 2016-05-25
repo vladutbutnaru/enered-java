@@ -1,0 +1,26 @@
+ArrayList<String> strings = new ArrayList<String>();
+		strings.add("test");
+		System.out.println(strings.get(0));
+		strings.add("test1");
+		System.out.println(strings.indexOf("test1"));
+		
+		TestClass t = new TestClass();
+		TestClass t1= new TestClass();
+		TestClass t2= new TestClass();
+		t.setPret(5.5);
+		t1.setPret(6.6);
+		t2.setPret(7.7);
+		ArrayList<TestClass> ts = new ArrayList<TestClass>();
+		ts.add(t);
+		ts.add(t1);
+		ts.add(t2);
+		System.out.println(ts.get(0).getPret());
+		
+		for(int i=0;i<ts.size();i++){
+			if(ts.get(i).getPret()==6){
+				System.out.println(i);
+			}
+				
+		}
+	
+		System.out.println("t1");
