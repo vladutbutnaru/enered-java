@@ -6,3 +6,6 @@ In acest repo vei gasi exercitiile si rezolvarile lor, alaturi de template-uri s
 
 # Reguli
 Lucreaza doar in folderul Students, in folderul cu numele tau de utilizator de GitHub
+
+# Skype address
+vlad.butnaru1994
