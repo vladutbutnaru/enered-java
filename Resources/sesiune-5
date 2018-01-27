@@ -1,0 +1,303 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Om gigel = new Om();
+		//
+		// gigel.greutate = 55;
+		//
+		// gigel.mananca("pizza");
+		//
+		// gigel.mananca("salata");
+		//
+		// gigel.profesie = "inginer";
+		// gigel.construiesteMasina("Opel");
+		//
+		// gigel.profesie = "programator";
+		// gigel.construiesteMasina("Opel");
+		//
+		// Human john = new Human();
+		// john.varsta = 20;
+		// john.salariu = 3900;
+		// john.greutate = 60;
+		// john.sold = 10000;
+		// int saptamaniTrecute = 0;
+		// int oreTrecute = 0;
+		// int zileTrecute = 0;
+		// while (john.mort == false) {
+		// System.out.println("A inceput ziua " + zileTrecute);
+		// while (oreTrecute < 24) {
+		// System.out.println("Ora: " + oreTrecute + ":00");
+		// if (john.foame > 10 && john.foame < 20)
+		// john.greutate = john.greutate - 0.1;
+		//
+		// if (john.foame > 20 && john.foame < 30)
+		// john.greutate = john.greutate - 0.3;
+		//
+		// if (john.foame > 30)
+		// john.greutate = john.greutate - 0.5;
+		//
+		// if (john.sete > 10 && john.sete < 20)
+		// john.greutate = john.greutate - 0.05;
+		//
+		// if (john.sete > 20 && john.sete < 30)
+		// john.greutate = john.greutate - 0.1;
+		//
+		// if (john.sete > 50 || john.greutate < 35 || john.oboseala > 200 ||
+		// john.varsta == 98)
+		// john.mort = true;
+		//
+		// if (john.foame > 10 && john.greutate < 60)
+		// john.mananca("pizza");
+		//
+		// if (john.foame > 25 && john.greutate < 60) {
+		// john.mananca("salata");
+		// john.mananca("pizza");
+		// john.mananca("pizza");
+		// john.mananca("burger");
+		// }
+		// if (john.sete > 10) {
+		// john.bea("cola");
+		// john.bea("cola");
+		// john.bea("apa");
+		//
+		// }
+		//
+		// if (john.sete > 20) {
+		//
+		// john.bea("cola");
+		// john.bea("apa");
+		// john.bea("apa");
+		// john.bea("apa");
+		// john.bea("cola");
+		// }
+		//
+		// if (oreTrecute >= 0 && oreTrecute <= 7) {
+		// if (john.oboseala > 0) {
+		// john.doarme(1);
+		// System.out.println(oreTrecute + ": 00 -> Dorm ; Oboseala:" + john.oboseala +
+		// "");
+		// } else
+		// john.relaxare(1);
+		//
+		// }
+		//
+		// if (zileTrecute < 5 && oreTrecute >= 9 && oreTrecute <= 18) {
+		// john.munceste(1);
+		// System.out.println(oreTrecute + ": 00 -> Muncesc");
+		//
+		// }
+		//
+		// if (zileTrecute > 5) {
+		// john.relaxare(1);
+		// System.out.println(oreTrecute + ": 00 -> Ma relaxez");
+		//
+		// }
+		//
+		// oreTrecute = oreTrecute + 1;
+		//
+		// }
+		// oreTrecute = 0;
+		// System.out.println("S-a terminat ziua " + zileTrecute);
+		// System.out.println("Starea lui John:");
+		// System.out.println("Sold: " + john.sold + " RON");
+		// System.out.println("Foame: " + john.foame);
+		// System.out.println("Sete: " + john.sete);
+		// System.out.println("Oboseala: " + john.oboseala);
+		// System.out.println("Greutate: " + john.greutate + " kg");
+		// if (zileTrecute == 7) {
+		// zileTrecute = 0;
+		// saptamaniTrecute = saptamaniTrecute + 1;
+		//
+		// }
+		// if (saptamaniTrecute % 4 == 0) {
+		// john.primesteSalariu();
+		// john.platesteCheltuieli();
+		//
+		// }
+		// if (saptamaniTrecute % 56 == 0)
+		// john.varsta = john.varsta + 1;
+		// zileTrecute = zileTrecute + 1;
+		//
+		// }
+		//
+		// System.out.println(
+		// "John a murit dupa " + saptamaniTrecute + " saptamani, avand " + (john.varsta
+		// - 1) + " ani :(");
+		//
+		//
+
+		char[][] harta = new char[8][8];
+
+		for (int i = 0; i < 8; i++) {
+			harta[0][i] = '0';
+			harta[i][5] = '0';
+		}
+		harta[1][0] = '0';
+		harta[1][1] = '0';
+		harta[1][2] = '1';
+		harta[1][3] = '0';
+		harta[1][4] = '1';
+		harta[1][5] = '0';
+		harta[1][6] = '0';
+		harta[1][7] = '0';
+		harta[2][0] = '0';
+		harta[2][1] = '0';
+		harta[2][2] = '1';
+		harta[2][3] = '0';
+		harta[2][4] = '1';
+		harta[2][5] = '0';
+		harta[2][6] = '0';
+		harta[2][7] = '0';
+		harta[3][0] = '0';
+		harta[3][1] = '0';
+		harta[3][2] = '0';
+		harta[3][3] = '0';
+		harta[3][4] = '1';
+		harta[3][5] = '0';
+		harta[3][6] = '0';
+		harta[3][7] = '0';
+		harta[4][0] = '0';
+		harta[4][1] = '0';
+		harta[4][2] = '1';
+		harta[4][3] = '0';
+		harta[4][4] = '1';
+		harta[4][5] = '0';
+		harta[4][6] = '1';
+		harta[4][7] = '0';
+		harta[5][0] = '0';
+		harta[5][1] = '0';
+		harta[5][2] = '0';
+		harta[5][3] = '0';
+		harta[5][4] = '1';
+		harta[5][5] = '0';
+		harta[5][6] = '0';
+		harta[5][7] = '1';
+		harta[6][0] = '0';
+		harta[6][1] = '0';
+		harta[6][2] = '0';
+		harta[6][3] = '1';
+		harta[6][4] = '1';
+		harta[6][5] = '0';
+		harta[6][6] = '0';
+		harta[6][7] = '1';
+		harta[7][0] = '0';
+		harta[7][1] = '1';
+		harta[7][2] = '1';
+		harta[7][3] = '0';
+		harta[7][4] = '0';
+		harta[7][5] = '0';
+		harta[7][6] = '0';
+		harta[7][7] = '1';
+
+		int xCascaval = 5;
+		int yCascaval = 6;
+		int xMouse = 7;
+		int yMouse = 2;
+		int optiuni = 0;
+		int saltX[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		int saltY[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		int progresiv = 1;
+		harta[xCascaval][yCascaval] = 'c';
+		harta[xMouse][yMouse] = 's';
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				System.out.print(harta[i][j] + " ");
+			}
+			System.out.println("");
+
+		}
+		System.out.println("");
+
+		while (yCascaval != yMouse || xCascaval != xMouse) { // cand soarecele ajunge la cascaval bucla se va opri
+
+			// facem o functie pentru intoarcerea la o locatie cand nu mai sunt optiuni
+
+			if (xMouse > 0 && yMouse < 7)
+				if (harta[xMouse - 1][yMouse] == '0' && harta[xMouse][yMouse + 1] == '0') {
+					optiuni++;
+					saltX[optiuni] = xMouse;
+					saltY[optiuni] = yMouse;
+				}
+			if (xMouse > 0 && yMouse < 7 && xMouse < 7)
+				if (harta[xMouse - 1][yMouse] == '0' && harta[xMouse][yMouse + 1] == '0'
+						&& harta[xMouse + 1][yMouse] == '0') {
+					optiuni++;
+					saltX[optiuni] = xMouse;
+					saltY[optiuni] = yMouse;
+				}
+			if (xMouse > 0 && yMouse < 7 && xMouse < 7 && yMouse > 1)
+
+				if (harta[xMouse - 1][yMouse] == '0' && harta[xMouse][yMouse + 1] == '0'
+						&& harta[xMouse + 1][yMouse] == '0' && harta[xMouse][yMouse - 1] == '0') {
+					optiuni++;
+					saltX[optiuni] = xMouse;
+					saltY[optiuni] = yMouse;
+				}
+
+			// Mai jos sunt mutarile face doar o mutare pe repetitie
+			if (xMouse > 0 && (harta[xMouse - 1][yMouse] == '0' || harta[xMouse - 1][yMouse] == 'c')) { // mutare sus
+				harta[xMouse][yMouse] = '-';
+				xMouse--;
+				harta[xMouse][yMouse] = 's';
+			} else {
+				if (yMouse < 7 && (harta[xMouse][yMouse + 1] == '0' || harta[xMouse][yMouse + 1] == 'c')) { // mutare
+																											// dreapta
+					harta[xMouse][yMouse] = '-';
+					yMouse++;
+					harta[xMouse][yMouse] = 's';
+				} else {
+					if (xMouse < 7 && (harta[xMouse + 1][yMouse] == '0' || harta[xMouse + 1][yMouse] == 'c')) { // mutare
+																												// jos
+						harta[xMouse][yMouse] = '-';
+						xMouse++;
+						harta[xMouse][yMouse] = 's';
+					} else {
+						if (yMouse > 0 && (harta[xMouse][yMouse - 1] == '0' || harta[xMouse][yMouse - 1] == 'c')) { // mutare
+																													// stanga
+							harta[xMouse][yMouse] = '-';
+							yMouse--;
+							harta[xMouse][yMouse] = 's';
+						} else {
+							harta[xMouse][yMouse] = '-';
+							xMouse = saltX[progresiv]; // daca nu poate sa mearga in nici o directie
+							yMouse = saltY[progresiv]; // coordonatele vor lua prima valoare de unde avea mai mult de o
+														// optiune
+							progresiv++;
+
+						}
+					}
+				}
+			} // e extra ca sa pot vedea pas cu pas cum lucreaza
+			for (int i = 0; i < 8; i++) {
+				for (int j = 0; j < 8; j++) {
+					System.out.print(harta[i][j] + " ");
+				}
+				System.out.println("");
+
+			}
+			System.out.println("");
+		}
+		// afisare dupa parcurgere e mai jos
+
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				System.out.print(harta[i][j] + " ");
+			}
+			System.out.println("");
+
+		}
+
+		System.out.println(xMouse + " " + yMouse);
+		System.out.println(xCascaval + " " + yCascaval);
+
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				System.out.print(harta[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
